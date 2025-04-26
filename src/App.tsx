@@ -25,13 +25,13 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-purple-300 via-pink-200 to-red-300 flex flex-col items-center justify-center px-4 py-8">
+      <h1 className="text-4xl font-extrabold text-gray-900 mb-12">
+        Platform Caption Generator
+      </h1>
       <div className="w-full max-w-6xl mx-auto flex flex-col sm:flex-row gap-8">
         {/* Left side: Search box */}
         <div className="flex-1 flex flex-col bg-gradient-to-r from-white via-gray-100 to-gray-200 shadow-md rounded-xl p-6 mb-8 border border-gray-200">
           <header className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">
-              Platform Caption Generator
-            </h1>
             <p className="text-gray-600 max-w-md mx-auto">
               Select a platform, add optional context, and generate perfect
               captions for your content
@@ -58,19 +58,19 @@ function App() {
             )}
           </div>
           <div className="mt-6">
-              <button
-                onClick={handleGenerate}
-                disabled={loading}
-                className={`w-full bg-gradient-to-r from-purple-500 via-pink-400 to-red-500 flex items-center justify-center rounded-lg py-2.5 px-4 text-white font-medium transition-all duration-200 ${
-                  loading
-                    ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-primary-600 hover:bg-primary-700 active:transform active:scale-[0.98]"
-                }`}
-              >
-                <Wand2 size={18} className="mr-2" />
-                Generate Caption
-              </button>
-            </div>
+            <button
+              onClick={handleGenerate}
+              disabled={loading}
+              className={`w-full bg-gradient-to-r from-purple-500 via-pink-400 to-red-500 flex items-center justify-center rounded-lg py-2.5 px-4 text-white font-medium transition-all duration-200 ${
+                loading
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-primary-600 hover:bg-primary-700 active:transform active:scale-[0.98]"
+              }`}
+            >
+              <Wand2 size={18} className="mr-2" />
+              Generate Caption
+            </button>
+          </div>
         </div>
 
         {/* Right side: Result */}
